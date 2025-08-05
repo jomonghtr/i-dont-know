@@ -1,0 +1,85 @@
+index.html<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For You ❤️</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffe4ec, #ffcdd2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      color: #e91e63;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      position: relative;
+      height: 100px;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 16px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    #yesBtn {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #f44336;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hey, I have a question for you...</h1>
+  <p>Do you like me? 😳</p>
+
+  <div class="buttons">
+    <button id="yesBtn">I like you 💖</button>
+    <button id="noBtn">I don’t like you ❌</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('noBtn');
+    const yesBtn = document.getElementById('yesBtn');
+
+    // Make the "No" button run away
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.random() * 300;
+      const y = Math.random() * 200;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    yesBtn.addEventListener('click', () => {
+      alert("Yay! I like you too 💘 – from Jomong Silmaro 😘");
+    });
+  </script>
+
+</body>
+</html>
